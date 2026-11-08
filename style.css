@@ -1,0 +1,141 @@
+/* 旅こより と同じ、やわらかいベージュ〜ブラウンの配色 */
+:root {
+  --background: #F7F3EE;
+  --surface: #FDFAF5;
+  --accent: #B0846E;
+  --accent-dark: #8A5F4C;
+  --sand-light: #F1E9DF;
+  --text: #4A3C36;
+  --sub-text: #8D7F77;
+  --line: #E9E0D6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+header.site a.home {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav.links a {
+  color: var(--accent-dark);
+  margin-left: 16px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+h1 { font-size: 28px; line-height: 1.4; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+h3 { font-size: 16px; margin: 24px 0 8px; }
+
+p.lead { color: var(--sub-text); margin-top: 0; }
+
+a { color: var(--accent-dark); }
+
+.card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(74, 60, 54, 0.08);
+  margin: 16px 0;
+}
+
+.card h3 { margin-top: 0; }
+
+.app-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.app-icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  object-fit: cover;
+  background: var(--accent);
+  box-shadow: 0 1px 4px rgba(74, 60, 54, 0.15);
+}
+
+.app-card .name { font-weight: 700; font-size: 18px; }
+.app-card .desc { color: var(--sub-text); font-size: 14px; }
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 22px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 4px 8px 4px 0;
+}
+
+.button.outline {
+  background: transparent;
+  color: var(--accent-dark);
+  border: 1.5px solid var(--accent);
+}
+
+ul.features { padding-left: 1.2em; }
+ul.features li { margin: 4px 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: var(--sand-light); }
+
+.note { color: var(--sub-text); font-size: 13px; }
+
+footer.site {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--sub-text);
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 24px; }
+  /* 表が画面からはみ出さないよう、横にスクロールできるようにする */
+  .table-wrap { overflow-x: auto; }
+}
